@@ -5,7 +5,7 @@ This is an interactive web-based terminal UI where users can type commands to ex
 
 ## My portfolio link
 
-- link: talhashaikh.xyz
+- link: [Talha Shaikh - Poertfolio](talhashaikh.xyz)
 
 ## ✨ Features
 
