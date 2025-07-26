@@ -1,0 +1,156 @@
+/* Cyberpunk theme styles */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono:wght@400&display=swap');
+
+* {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* CRT Screen effects */
+.cyberpunk-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 255, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 0, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+}
+
+.scan-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    transparent 50%, 
+    rgba(0, 255, 0, 0.02) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+/* Glitch text effect */
+.glitch-text {
+  position: relative;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch-text::before {
+  color: #ff0000;
+  z-index: -1;
+}
+
+.glitch-text::after {
+  color: #00ffff;
+  z-index: -2;
+}
+
+/* Animations */
+/* Terminal styling */
+.terminal-window {
+  background: rgba(0, 0, 0, 0.9);
+  border: 2px solid #00ff00;
+  box-shadow: 
+    0 0 20px rgba(0, 255, 0, 0.3),
+    inset 0 0 20px rgba(0, 255, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.terminal-text {
+  color: #00ff00;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* Neon glow effects */
+.neon-green {
+  color: #00ff00;
+  text-shadow: 
+    0 0 2px #00ff00,
+    0 0 4px #00ff00;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.neon-cyan {
+  color: #00ffff;
+  text-shadow: 
+    0 0 5px #00ffff,
+    0 0 10px #00ffff,
+    0 0 15px #00ffff,
+    0 0 20px #00ffff;
+}
+
+.neon-pink {
+  color: #ff0080;
+  text-shadow: 
+    0 0 5px #ff0080,
+    0 0 10px #ff0080,
+    0 0 15px #ff0080,
+    0 0 20px #ff0080;
+}
+
+/* Hover effects */
+.terminal-hover {
+  transition: all 0.3s ease;
+}
+
+.terminal-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 0 30px rgba(0, 255, 0, 0.5),
+    inset 0 0 30px rgba(0, 255, 0, 0.2);
+}
+
+/* Matrix rain effect */
+.matrix-rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.matrix-column {
+  position: absolute;
+  top: -100%;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 14px;
+  color: #00ff00;
+  text-shadow: 0 0 5px #00ff00;
+  animation: matrix-fall linear infinite;
+}
+
+@keyframes matrix-fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+/* Html wrapper for 3D terminal interface */
+.terminal-html-wrapper {
+  width: 900px;
+  height: 600px;
+  background: rgba(0, 0, 0, 0.95);
+  border: 2px solid #00ff00;
+  box-shadow: 
+    0 0 20px rgba(0, 255, 0, 0.5),
+    inset 0 0 20px rgba(0, 255, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
